@@ -1,0 +1,9 @@
+// General Principles: Create a blog)
+// 1. Blog consists of posts taken from localstorage
+// 2. Posts are created by user in small form popup
+// 3. Posts are stored in localstorage and displayed on blog dinamicly!!!
+// 4. Posts consist of id, title, text and date
+// 5. Posts are displayed in a list with title and date
+// 6. On each post click posts are displayed in full
+// 7. Posts create form has validations
+// 8. Posts can be edited and deleted --- ?? 

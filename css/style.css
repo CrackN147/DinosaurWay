@@ -1,0 +1,67 @@
+#openForm {
+  margin: 10px 0;
+  padding: 5px;
+  font-size: 16px;
+}
+#postList {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  width: 100%;
+  margin: 10px auto;
+  padding: 0;
+  list-style: none;
+}
+#postList .post {
+  display: flex;
+  flex-direction: column;
+  width: 80%;
+  border: 1px solid #ccc;
+  border-radius: 15px;
+  margin: 0 0 20px;
+}
+#postList .post h3 {
+  text-align: center;
+  cursor: pointer;
+}
+#postList .post p {
+  padding: 10px;
+  display: none;
+}
+#createForm {
+  display: none;
+  position: absolute;
+  bottom: 0;
+  padding: 20px 0 20px;
+  margin: 20px auto;
+  border-top: 1px solid #000;
+  align-items: center;
+  justify-content: center;
+  width: 100%;
+  background: white;
+  z-index: 999;
+}
+
+#createForm form {
+  width: 80%;
+  display: flex;
+  flex-direction: column;
+}
+
+#createForm form input {
+  margin: 0 0 20px;
+  font-size: 16px;
+  padding: 10px;
+}
+
+#createForm form textarea {
+  margin: 0 0 20px;
+  font-size: 16px;
+  padding: 10px;
+}
+
+#createForm form button {
+  margin: 0 0 20px;
+  font-size: 18px;
+}

@@ -1,0 +1,25 @@
+<html>
+<head>
+  <title>My Personal Blog</title>
+  <link rel="stylesheet" href="css/style.css" type="text/css" />
+</head>
+<body>
+  <button id="openForm" type="button" onclick="openForm()">
+    ფორმის გახსნა
+  </button>
+  <div id="postList"></div>
+  <div id="createForm">
+    <form id="createPost">
+      <input id="title" type="text" name="title" placeholder="დასახელება" />
+      <textarea id="content" name="content" placeholder="შეიყვანეთ ტექსტი"></textarea>
+      <button type="button" 
+        onclick="createNewPost()">
+        ახალი ჩანაწერის შექმნა
+      </button>
+    </form>
+  </div>
+  <script type="text/javascript" src="js/storage.js"></script>
+  <script type="text/javascript" src="js/functions.js"></script>
+  <script type="text/javascript" src="js/general.js"></script>
+</body>
+</html>
