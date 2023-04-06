@@ -98,8 +98,14 @@ window.onload = () => {
     }
   } else {
     let post = document.createElement("h3");
-    post.innerText = "პოსტები არ არის";
-    post.setAttribute('id', 'noPosts');
-    postsList.appendChild(post);
+    // post.innerText = "პოსტები არ არის";
+    // post.setAttribute('id', 'noPosts');
+    // postsList.appendChild(post);
+    const xhttp = new XMLHttpRequest();
+    xhttp.onload = function() {
+      console.log(JSON.parse(this.responseText));
+    }
+    xhttp.open("GET", "https://raw.githubusercontent.com/CrackN147/DinosaurWay/production/html/noPosts.html", true);
+    xhttp.send();
   }
 }
