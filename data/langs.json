@@ -2,11 +2,13 @@
   "ka": {
     "noPosts": "პოსტები არ არის",
     "closeForm": "ფორმის დახურვა",
-    "openForm": "ფორმის გახსნა"
+    "openForm": "ფორმის გახსნა",
+    "lang": "ქართული"
   },
   "en": {
     "noPosts": "No posts",
     "closeForm": "Close form",
-    "openForm": "Open form"
+    "openForm": "Open form",
+    "lang": "English"
   }
 }

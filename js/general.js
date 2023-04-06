@@ -1,4 +1,5 @@
 let formState = false;
+let langState = 'en';
 let form = document.getElementById("createForm");
 let button = document.getElementById("openForm");
 let postsList = document.getElementById("postList");
@@ -15,11 +16,11 @@ const openForm = () => {
   if (!formState) {
     form.style.display = "flex";
     formState = true;
-    button.innerText = langs.closeForm;
+    button.innerText = langs[langState].closeForm;
   } else {
     form.style.display = "none";
     formState = false;
-    button.innerText = langs.openForm;
+    button.innerText = langs[langState].openForm;
   }
 }
 
@@ -98,6 +99,18 @@ const createPostHtml = (value, top = false) => {
   
 }
 
+const changeLang = () => {
+  if(langState === 'en') {
+    langState = 'ka';
+  } else {
+    langState = 'en';
+  }
+  document.getElementById("language").innerText = langState;
+  document.getElementById("openForm").innerText = langs[langState].openForm;
+  document.getElementById("closeForm").innerText = langs[langState].closeForm;
+  document.getElementById("noPosts").innerText = langs[langState].noPosts;
+}
+
 
 window.onload = async () => {
   langs = await getLangs();
@@ -109,9 +122,9 @@ window.onload = async () => {
   } else {
     let post = document.createElement("h3");
     post.setAttribute('id', 'noPosts');
-    post.innerText = langs.noPosts;
+    post.innerText = langs[langState].noPosts;
     postsList.appendChild(post);
   }
-  document.getElementById("openForm").innerText = langs.openForm;
-  document.getElementById("language").innerText = 'English';
+  document.getElementById("openForm").innerText = langs[langState].openForm;
+  document.getElementById("language").innerText = langs[langState].lang;
 }
