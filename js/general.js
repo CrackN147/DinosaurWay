@@ -127,5 +127,5 @@ window.onload = async () => {
   }
   document.getElementById("openForm").innerText = langs[langState].openForm;
   console.log(langs[langState]);
-  document.getElementById("language").innerText = langs[langState].lang;
+  document.getElementById("language").innerText = langs[langState].language;
 }
