@@ -3,12 +3,12 @@
     "noPosts": "პოსტები არ არის",
     "closeForm": "ფორმის დახურვა",
     "openForm": "ფორმის გახსნა",
-    "lang": "ქართული"
+    "language": "ქართული"
   },
   "en": {
     "noPosts": "No posts",
     "closeForm": "Close form",
     "openForm": "Open form",
-    "lang": "English"
+    "language": "English"
   }
 }

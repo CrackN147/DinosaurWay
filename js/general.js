@@ -1,12 +1,12 @@
 let formState = false;
-let langState = 'en';
+let langState = 'ka';
 let form = document.getElementById("createForm");
 let button = document.getElementById("openForm");
 let postsList = document.getElementById("postList");
 let langs = {};
 
 const getLangs = async () => {
-  const getData = fetch("https://raw.githubusercontent.com/CrackN147/DinosaurWay/production/data/langs.json");
+  const getData = fetch("https://raw.githubusercontent.com/CrackN147/DinosaurWay/production/data/langs.json?version=1");
   return await getData.then((responce) => {
     return responce.json();
   });
@@ -126,5 +126,6 @@ window.onload = async () => {
     postsList.appendChild(post);
   }
   document.getElementById("openForm").innerText = langs[langState].openForm;
+  console.log(langs[langState]);
   document.getElementById("language").innerText = langs[langState].lang;
 }
