@@ -2,15 +2,24 @@ let formState = false;
 let form = document.getElementById("createForm");
 let button = document.getElementById("openForm");
 let postsList = document.getElementById("postList");
+let langs = {};
+
+const getLangs = async () => {
+  const getData = fetch("https://raw.githubusercontent.com/CrackN147/DinosaurWay/production/data/langs.json");
+  return await getData.then((responce) => {
+    return responce.json();
+  });
+}
+
 const openForm = () => {
   if (!formState) {
     form.style.display = "flex";
     formState = true;
-    button.innerText = "ფორმის დახურვა";
+    button.innerText = langs.closeForm;
   } else {
     form.style.display = "none";
     formState = false;
-    button.innerText = "ფორმის გახსნა";
+    button.innerText = langs.openForm;
   }
 }
 
@@ -90,7 +99,8 @@ const createPostHtml = (value, top = false) => {
 }
 
 
-window.onload = () => {
+window.onload = async () => {
+  langs = await getLangs();
   let posts = getPosts();
   if (posts.length > 0) {
     for (let i = 0; i < posts.length; i++) {
@@ -98,14 +108,8 @@ window.onload = () => {
     }
   } else {
     let post = document.createElement("h3");
-    // post.innerText = "პოსტები არ არის";
-    // post.setAttribute('id', 'noPosts');
-    // postsList.appendChild(post);
-    const xhttp = new XMLHttpRequest();
-    xhttp.onload = function() {
-      console.log(JSON.parse(this.responseText));
-    }
-    xhttp.open("GET", "https://raw.githubusercontent.com/CrackN147/DinosaurWay/production/html/noPosts.html", true);
-    xhttp.send();
+    post.setAttribute('id', 'noPosts');
+    post.innerText = langs.noPosts;
+    postsList.appendChild(post);
   }
 }
