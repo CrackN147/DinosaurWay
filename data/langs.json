@@ -1,5 +1,12 @@
 {
-  "noPosts": "პოსტები არ არის",
-  "closeForm": "ფორმის დახურვა",
-  "openForm": "ფორმის გახსნა"
+  "ka": {
+    "noPosts": "პოსტები არ არის",
+    "closeForm": "ფორმის დახურვა",
+    "openForm": "ფორმის გახსნა"
+  },
+  "en": {
+    "noPosts": "No posts",
+    "closeForm": "Close form",
+    "openForm": "Open form"
+  }
 }

@@ -112,4 +112,6 @@ window.onload = async () => {
     post.innerText = langs.noPosts;
     postsList.appendChild(post);
   }
+  document.getElementById("openForm").innerText = langs.openForm;
+  document.getElementById("language").innerText = 'English';
 }
