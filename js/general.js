@@ -6,7 +6,7 @@ let postsList = document.getElementById("postList");
 let langs = {};
 
 const getLangs = async () => {
-  const getData = fetch("https://raw.githubusercontent.com/CrackN147/DinosaurWay/production/data/langs.json?version=1");
+  const getData = fetch("https://raw.githubusercontent.com/CrackN147/DinosaurWay/production/data/langs.json?version=1234");
   return await getData.then((responce) => {
     return responce.json();
   });
@@ -99,7 +99,7 @@ const createPostHtml = (value, top = false) => {
   
 }
 
-const changeLang = () => {
+const changeLanguage = () => {
   if(langState === 'en') {
     langState = 'ka';
   } else {
@@ -107,7 +107,7 @@ const changeLang = () => {
   }
   document.getElementById("language").innerText = langState;
   document.getElementById("openForm").innerText = langs[langState].openForm;
-  document.getElementById("closeForm").innerText = langs[langState].closeForm;
+  // document.getElementById("closeForm").innerText = langs[langState].closeForm;
   document.getElementById("noPosts").innerText = langs[langState].noPosts;
 }
 
@@ -126,6 +126,5 @@ window.onload = async () => {
     postsList.appendChild(post);
   }
   document.getElementById("openForm").innerText = langs[langState].openForm;
-  console.log(langs[langState]);
   document.getElementById("language").innerText = langs[langState].language;
 }
